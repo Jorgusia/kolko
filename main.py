@@ -74,3 +74,22 @@ def gra():
                     print('\nKoniec gry') 
                     print(f'WYGRAŁ GRACZ: {gracz}')
                     break
+
+                if licznik == 9:
+                    print('\nKONIEC GRY!!\n')
+                    print('\nJEST REMIS!!\n')
+            if gracz == 'X':
+                gracz = 'O'
+            else:
+                gracz = 'X'
+        
+        restart = input('Czy chcesz zagrać ponownie/ (t/n)')
+        if restart == 't' or restart == 'T':
+            for key in Klawisze_gry:
+                Plansza_Do_Gry[key]= ' '
+
+                gra()
+
+if __name__=='__main__':
+    gra()
+                
